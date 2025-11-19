@@ -1,5 +1,13 @@
 # @tanggoat/request
 
+## 2.1.2
+
+### Patch Changes
+
+- e5c8065: ceshi4
+- zhengshi2
+- 06c5b7e: ceshi3
+
 ## 2.1.2-beta.2
 
 ### Patch Changes

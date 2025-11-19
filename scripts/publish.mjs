@@ -11,7 +11,7 @@ const { select } = enquirer;
 // ===========================
 // 配置
 // ===========================
-const NPM_REGISTRY = 'https://registry.npmjs.org/';
+const NPM_REGISTRY = '//registry.npmjs.org/';
 const CHANGESET_DIR = resolve('.changeset');
 const PRE_JSON_PATH = resolve(CHANGESET_DIR, 'pre.json');
 
@@ -32,7 +32,7 @@ async function run(cmd, args = [], opts = {}) {
     stdio: 'inherit',
     env: {
       ...process.env,
-      NPM_CONFIG_REGISTRY: NPM_REGISTRY,
+      NPM_CONFIG_REGISTRY: NPM_REGISTRY, // npm地址
       ...opts.env,
     },
   };
@@ -100,17 +100,20 @@ async function main() {
   // 正式发布流程
   // ===========================
   if (mode === 'production') {
-    log('➡️  Exiting pre-release mode (if any)...');
+    log('退出 pre-release 模式(如果存在)...');
     try {
       await run('pnpm', ['exec', 'changeset', 'pre', 'exit']);
     } catch {
-      log('(Not in pre mode, skipped)');
+      log('(未处于 pre 模式, 跳过)');
     }
 
-    log('➡️  Generating new version...');
+    // 执行 changeset
+    await ensureChangesetExists();
+
+    log(`正在生成 ${mode} 版本...`);
     await run('pnpm', ['exec', 'changeset', 'version']);
 
-    log('➡️  Committing changes...');
+    log(`提交 ${mode} 版本...`);
     await run('git', ['add', '.']);
     await run('git', [
       'commit',
@@ -119,10 +122,10 @@ async function main() {
       '--author=Release Bot <release@example.com>',
     ]);
 
-    log('➡️  Publishing to official npm (latest tag)...');
+    log(`发布到官方 npm (${mode} tag)...`);
     await run('pnpm', ['exec', 'changeset', 'publish']);
 
-    success('🎉 Production release completed!');
+    success(` ${mode} 发布完成!`);
   }
 
   // ===========================
@@ -136,13 +139,13 @@ async function main() {
       await run('pnpm', ['exec', 'changeset', 'pre', 'enter', 'beta']);
     }
     
-    // 检查 changeset
+    // 执行 changeset
     await ensureChangesetExists();
 
-    log('正在生成 beta 版本...');
+    log(`正在生成 ${mode} 版本...`);
     await run('pnpm', ['exec', 'changeset', 'version']);
 
-    log('提交 beta 版本...');
+    log(`提交 ${mode} 版本...`);
     await run('git', ['add', '.']);
     await run('git', [
       'commit',
@@ -151,10 +154,10 @@ async function main() {
       '--author=Release Bot <release@example.com>',
     ]);
 
-    log('发布到官方npm (beta tag)...');
+    log(`发布到官方 npm (${mode} tag)...`);
     await run('pnpm', ['exec', 'changeset', 'publish']);
 
-    success('Beta 发布完成!');
+    success(` ${mode} 发布完成!`);
   }
 }
 
