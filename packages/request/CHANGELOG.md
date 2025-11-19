@@ -1,5 +1,31 @@
 # @tanggoat/request
 
+## 2.1.2-beta.0
+
+### Patch Changes
+
+- beta 测试
+
+## 2.1.1
+
+### Patch Changes
+
+- 测试 3
+
+## 2.1.0
+
+### Minor Changes
+
+- 测试 2
+
+## 2.0.0
+
+### Patch Changes
+
+- ceshibao
+- 测试包提交
+- ceshi2
+
 ## 2.0.0-beta.1
 
 ### Major Changes

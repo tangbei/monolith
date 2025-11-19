@@ -1,7 +1,7 @@
 {
   "name": "next-template",
   "description": "基于Nextjs的SSR模版项目",
-  "version": "1.0.0",
+  "version": "1.0.4-beta.0",
   "author": "tanggoat",
   "private": true,
   "type": "module",
@@ -20,7 +20,7 @@
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.0.3",
-    "@tanggoat/request": "2.0.0-beta.1",
+    "@tanggoat/request": "2.1.2-beta.0",
     "@types/negotiator": "0.6.3",
     "antd": "5.25.3",
     "classnames": "2.5.1",

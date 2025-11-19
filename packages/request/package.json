@@ -1,6 +1,6 @@
 {
   "name": "@tanggoat/request",
-  "version": "2.0.0-beta.1",
+  "version": "2.1.2-beta.0",
   "description": "A TypeScript HTTP request library based on Axios",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -33,6 +33,12 @@
     "tsup": "8.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "registry": "https://registry.npmjs.org/"
   }
 }
