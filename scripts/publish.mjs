@@ -11,7 +11,7 @@ const { select } = enquirer;
 // ===========================
 // 配置
 // ===========================
-const NPM_REGISTRY = '//registry.npmjs.org/';
+const NPM_REGISTRY = 'https://registry.npmjs.org/';
 const CHANGESET_DIR = resolve('.changeset');
 const PRE_JSON_PATH = resolve(CHANGESET_DIR, 'pre.json');
 
