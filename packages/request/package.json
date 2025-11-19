@@ -1,6 +1,6 @@
 {
   "name": "@tanggoat/request",
-  "version": "2.1.6-beta.0",
+  "version": "2.1.6-beta.1",
   "description": "A TypeScript HTTP request library based on Axios",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

@@ -85,10 +85,10 @@ async function ensureChangesetExists() {
 
 async function main() {
   // 检查未提交更改
-  const { stdout: gitStatus } = await execa('git', ['status', '--porcelain']);
-  if (gitStatus.trim()) {
-    error('You have uncommitted changes. Please commit or stash them first.');
-  }
+  // const { stdout: gitStatus } = await execa('git', ['status', '--porcelain']);
+  // if (gitStatus.trim()) {
+  //   error('You have uncommitted changes. Please commit or stash them first.');
+  // }
 
   // 用户选择模式
   const mode = await select({

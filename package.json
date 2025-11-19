@@ -7,7 +7,7 @@
     "next:dev": "pnpm --filter next-template dev",
     "next:build": "pnpm --filter next-template build",
     "next:start": "pnpm --filter next-template start",
-    "npm:publish": "node scripts/publish.mjs"
+    "published": "node scripts/publish.mjs"
   },
   "keywords": [],
   "author": "",
