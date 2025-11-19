@@ -19,7 +19,7 @@ const PRE_JSON_PATH = resolve(CHANGESET_DIR, 'pre.json');
 // 工具函数
 // ===========================
 
-const log = (msg) => console.log(chalk.dim('➡️ ') + msg);
+const log = (msg) => console.log(chalk.blue('➡️  ') + msg);
 const success = (msg) => console.log(chalk.green('✅ ') + msg);
 const error = (msg) => {
   console.error(chalk.red('❌ ') + msg);
