@@ -1,6 +1,6 @@
 {
   "name": "@tanggoat/request",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "A TypeScript HTTP request library based on Axios",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -39,7 +39,6 @@
     "files": [
       "dist"
     ],
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   }
 }

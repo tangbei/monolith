@@ -1,5 +1,11 @@
 # @tanggoat/request
 
+## 2.1.4
+
+### Patch Changes
+
+- zhengshi4
+
 ## 2.1.3
 
 ### Patch Changes
