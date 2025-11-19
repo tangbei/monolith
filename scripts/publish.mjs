@@ -36,13 +36,16 @@ async function run(cmd, args = [], isExit = true, opts = {}) {
       ...opts.env,
     },
   };
-  try {
+  if (!isExit) {
     await execa(cmd, args, { ...defaultOpts, ...opts });
-  } catch (err) {
-    if (isExit) {
+  } else {
+    try {
+      await execa(cmd, args, { ...defaultOpts, ...opts });
+    } catch (err) {
       error(`Command failed: ${cmd} ${args.join(' ')}`);
     }
   }
+  
 }
 
 /** 判断是否存在changeset变更 */
@@ -82,10 +85,10 @@ async function ensureChangesetExists() {
 
 async function main() {
   // 检查未提交更改
-  // const { stdout: gitStatus } = await execa('git', ['status', '--porcelain']);
-  // if (gitStatus.trim()) {
-  //   error('You have uncommitted changes. Please commit or stash them first.');
-  // }
+  const { stdout: gitStatus } = await execa('git', ['status', '--porcelain']);
+  if (gitStatus.trim()) {
+    error('You have uncommitted changes. Please commit or stash them first.');
+  }
 
   // 用户选择模式
   const mode = await select({

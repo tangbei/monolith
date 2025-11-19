@@ -7,17 +7,16 @@
     "next:dev": "pnpm --filter next-template dev",
     "next:build": "pnpm --filter next-template build",
     "next:start": "pnpm --filter next-template start",
-    "publishAll": "node scripts/publish.mjs",
-    "publishSh": "bash scripts/publishSH.sh"
+    "npm:publish": "node scripts/publish.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "2.29.7",
-    "chalk": "^5.6.2",
-    "enquirer": "^2.4.1",
-    "execa": "^9.6.0",
+    "chalk": "5.6.2",
+    "enquirer": "2.4.1",
+    "execa": "9.6.0",
     "typescript": "5.9.3"
   },
   "dependencies": {
