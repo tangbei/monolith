@@ -87,9 +87,6 @@ async function main() {
   //   error('You have uncommitted changes. Please commit or stash them first.');
   // }
 
-  // 检查 changeset
-  await ensureChangesetExists();
-
   // 用户选择模式
   const mode = await select({
     message: '🚀 选择发布模式',
@@ -140,6 +137,9 @@ async function main() {
       log('进入 beta pre-release 模式...');
       await run('pnpm', ['exec', 'changeset', 'pre', 'enter', 'beta']);
     }
+    
+    // 检查 changeset
+    await ensureChangesetExists();
 
     log('正在生成 beta 版本...');
     await run('pnpm', ['exec', 'changeset', 'version']);
