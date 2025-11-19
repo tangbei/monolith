@@ -103,6 +103,8 @@ elif [ "$MODE" = "prerelease" ]; then
     log "➡️  进入 beta 预发布模式..."
     pnpm exec changeset pre enter beta
   fi
+  log "➡️  执行 changeset..."
+  pnpm exec changeset
 
   log "➡️  生成 beta 版本号..."
   pnpm exec changeset version

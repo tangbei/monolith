@@ -20,7 +20,7 @@
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
     "@next/mdx": "^16.0.3",
-    "@tanggoat/request": "2.1.2-beta.0",
+    "@tanggoat/request": "2.1.2-beta.1",
     "@types/negotiator": "0.6.3",
     "antd": "5.25.3",
     "classnames": "2.5.1",

@@ -6,5 +6,7 @@
     "next-template": "1.0.4-beta.0",
     "@tanggoat/request": "2.1.2-beta.0"
   },
-  "changesets": []
+  "changesets": [
+    "modern-pillows-appear"
+  ]
 }
