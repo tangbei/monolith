@@ -96,8 +96,13 @@ if [ "$MODE" = "production" ]; then
 
 elif [ "$MODE" = "prerelease" ]; then
   # --- 预发布流程 ---
-  log "➡️  进入 beta 预发布模式..."
-  pnpm exec changeset pre enter beta
+  # 智能处理 pre 模式：仅在未进入时 enter
+  if [ -f ".changeset/pre.json" ]; then
+    log "➡️  已处于预发布模式（$(jq -r '.tag // "unknown"' .changeset/pre.json)），跳过 'pre enter'"
+  else
+    log "➡️  进入 beta 预发布模式..."
+    pnpm exec changeset pre enter beta
+  fi
 
   log "➡️  生成 beta 版本号..."
   pnpm exec changeset version
