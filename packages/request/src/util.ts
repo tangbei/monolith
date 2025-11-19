@@ -19,7 +19,11 @@ export const DEFAULT_RETRY_DELAY = 1000;
 export const defaultRetryCondition = (error: any, attempt: number): boolean => {
   // 网络错误、超时、5xx服务器错误等可以重试
   if (axios.isCancel(error)) {
+
+    
     return false; // 取消的请求不重试
+
+
   }
 
   // 检查是否是网络错误
