@@ -34,7 +34,7 @@ warn() {
 
 # 检查未提交更改
 if ! git diff --quiet; then
-  error "You have uncommitted changes. Please commit or stash them first."
+  error "You have uncommitted changes. Please commit or stash them first(检测到您有未提交的更改,请先提交后再操作)."
 fi
 
 # 检查 changeset
