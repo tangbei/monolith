@@ -70,10 +70,10 @@ async function main() {
 
   // 用户选择模式
   const mode = await select({
-    message: '🚀 Select release mode',
+    message: '🚀 选择发布模式',
     choices: [
       { name: 'production', message: 'Production (正式发布)' },
-      { name: 'prerelease', message: 'Pre-release (预发布, e.g. beta)' },
+      { name: 'prerelease', message: 'Prerelease (预发布beta)' },
     ],
   });
 
