@@ -1,0 +1,16 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "home": "Home",
+    "about": "About",
+    "products": "Products"
+  },
+  "products": {
+    "title": "Product Details",
+    "description": "Product Description",
+    "price": "Price",
+    "status": "Status",
+    "available": "Available",
+    "notFound": "Product not found"
+  }
+} 

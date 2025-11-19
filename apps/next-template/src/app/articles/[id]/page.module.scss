@@ -1,0 +1,19 @@
+.articlesContainer {
+  width: 1000px;
+  margin: 20px auto;
+  display: flex;
+}
+
+.articlesContainerLeft {
+  min-width: 200px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.articlesContainerRight {
+  flex: 1;
+  max-width: 780px;
+  margin-left: 20px;
+  padding: 20px;
+  background: #ffffff;
+}

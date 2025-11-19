@@ -1,0 +1,72 @@
+.main-header {
+  position: sticky;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  // 保持粘性定位，避免对自身应用 transform
+
+  background: #fff;
+  box-shadow: 0 2px 8px #f2f3f5;
+  color: #909090;
+  z-index: 250;
+
+  .main-header-container {
+    margin: auto;
+    max-width: 1440px;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    position: relative;
+    // margin: 0 auto;
+    width: 100%;
+    // max-width: 960px;
+
+    .mainNav {
+      height: 100%;
+      flex: 1 0 auto;
+      line-height: normal;
+    }
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-direction: row-reverse;
+  height: 100%;
+  margin: 0;
+
+  .navListLeft {
+    display: flex;
+    order: 99;
+
+    .navListItem {
+      font-size: 14px;
+      color: #86909c;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .navListItemActive {
+      font-weight: 500;
+      color: #1e80ff;
+    }
+  }
+
+  .navListRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    order: 0;
+  }
+}

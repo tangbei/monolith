@@ -1,0 +1,25 @@
+{
+  "name": "monolith",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "next:dev": "pnpm --filter next-template dev",
+    "next:build": "pnpm --filter next-template build",
+    "next:start": "pnpm --filter next-template start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "2.29.7",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "qs": "6.14.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  }
+}

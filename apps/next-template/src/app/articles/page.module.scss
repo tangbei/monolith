@@ -1,0 +1,14 @@
+.articlesContainer {
+  padding-top: 20px;
+
+  display: flex;
+
+  .articlesContent {
+    flex: 1; 
+  }
+
+  .articlesAttach {
+    min-width: 300px;
+    padding-left: 20px;
+  }
+}

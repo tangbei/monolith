@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    // "baseUrl": ".",
+    // "paths": {
+    //   "react": ["./node_modules/react"],
+    //   "@types/react": ["./node_modules/@types/react"]
+    // },
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@tanggoat/request",
+  "version": "2.0.0-beta.1",
+  "description": "A TypeScript HTTP request library based on Axios",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "dev2": "tsup src/index.ts --format cjs,esm --dts --watch --sourcemap",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "request",
+    "axios",
+    "typescript",
+    "interceptor"
+  ],
+  "author": "tangbei",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "1.11.0"
+  },
+  "devDependencies": {
+    "rimraf": "5.0.0",
+    "tsup": "8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

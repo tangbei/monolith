@@ -1,0 +1,29 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Build tools
+tsup.config.ts
+tsconfig.json
+
+# Development files
+.vscode/
+.idea/
+*.log
+*.test.ts
+*.spec.ts
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+*.tsbuildinfo
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+LICENSE 

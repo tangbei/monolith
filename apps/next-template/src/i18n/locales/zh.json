@@ -1,0 +1,16 @@
+{
+  "common": {
+    "welcome": "欢迎",
+    "home": "首页",
+    "about": "关于",
+    "products": "产品"
+  },
+  "products": {
+    "title": "产品详情",
+    "description": "产品描述",
+    "price": "价格",
+    "status": "状态",
+    "available": "可购买",
+    "notFound": "未找到产品"
+  }
+} 
