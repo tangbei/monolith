@@ -27,7 +27,7 @@ const error = (msg) => {
 };
 const warn = (msg) => console.warn(chalk.yellow('⚠️  ') + msg);
 
-async function run(cmd, args = [], opts = {}) {
+async function run(cmd, args = [], isExit = true, opts = {}) {
   const defaultOpts = {
     stdio: 'inherit',
     env: {
@@ -39,7 +39,9 @@ async function run(cmd, args = [], opts = {}) {
   try {
     await execa(cmd, args, { ...defaultOpts, ...opts });
   } catch (err) {
-    error(`Command failed: ${cmd} ${args.join(' ')}`);
+    if (isExit) {
+      error(`Command failed: ${cmd} ${args.join(' ')}`);
+    }
   }
 }
 
@@ -102,7 +104,7 @@ async function main() {
   if (mode === 'production') {
     log('退出 pre-release 模式(如果存在)...');
     try {
-      await run('pnpm', ['exec', 'changeset', 'pre', 'exit']);
+      await run('pnpm', ['exec', 'changeset', 'pre', 'exit'], false);
     } catch {
       log('(未处于 pre 模式, 跳过)');
     }
@@ -136,7 +138,7 @@ async function main() {
       log('已处于pre-release(预发布)模式，跳过`pre enter`');
     } else {
       log('进入 beta pre-release 模式...');
-      await run('pnpm', ['exec', 'changeset', 'pre', 'enter', 'beta']);
+      await run('pnpm', ['exec', 'changeset', 'pre', 'enter', 'beta'], false);
     }
     
     // 执行 changeset
