@@ -1,5 +1,11 @@
 # @tanggoat/request
 
+## 2.1.2-beta.2
+
+### Patch Changes
+
+- ceshi4
+
 ## 2.1.2-beta.1
 
 ### Patch Changes

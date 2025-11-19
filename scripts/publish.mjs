@@ -54,10 +54,10 @@ function hasPendingChangesets() {
 
 /** 确保存在 changeset变更 */
 async function ensureChangesetExists() {
-  if (hasPendingChangesets()) {
-    log('有 changeset(s) 变更, 不再执行changeset变更...');
-    return;
-  }
+  // if (hasPendingChangesets()) {
+  //   log('有 changeset(s) 变更, 不再执行changeset变更...');
+  //   return;
+  // }
 
   warn('执行 changeset 变更操作...');
   console.log(); // 空行提升可读性
@@ -70,10 +70,8 @@ async function ensureChangesetExists() {
 
   // 再次检查（用户可能 Ctrl+C 退出）
   if (!hasPendingChangesets()) {
-    error('No changeset created. Aborting release.');
+    error('没有 changeset 创建. 中止并释放.');
   }
-
-  success('Changeset 创建成功!');
 }
 
 // ===========================
