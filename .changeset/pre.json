@@ -2,9 +2,9 @@
   "mode": "pre",
   "tag": "beta",
   "initialVersions": {
+    "@tanggoat/request": "2.1.2-beta.0",
     "demo": "0.0.4-beta.1",
-    "next-template": "1.0.4-beta.0",
-    "@tanggoat/request": "2.1.2-beta.0"
+    "next-template": "1.0.4-beta.0"
   },
   "changesets": [
     "modern-pillows-appear"
