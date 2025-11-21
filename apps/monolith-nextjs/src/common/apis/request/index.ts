@@ -37,5 +37,5 @@ const TBRequest = <D, T>(config: TBRequestConfig<D, T>) => {
     headers: config?.headers || {} as InternalAxiosRequestConfig['headers']
   }));
 };
- 
+
 export default TBRequest;
