@@ -7,6 +7,8 @@
     "next:dev": "pnpm --filter monolith-nextjs dev",
     "next:build": "pnpm --filter monolith-nextjs build",
     "next:start": "pnpm --filter monolith-nextjs start",
+    "blog:dev": "pnpm --filter monolith-blog dev",
+    "blog:start": "pnpm --filter monolith-blog start",
     "published": "node scripts/publish.mjs"
   },
   "keywords": [],

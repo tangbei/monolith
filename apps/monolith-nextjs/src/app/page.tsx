@@ -4,6 +4,7 @@ import Link from "next/link";
 // import { useRouter } from "next/navigation";
 import { Button } from "antd";
 import styles from "./page.module.css";
+import '@ant-design/v5-patch-for-react-19';
 
 import { request1 } from "@/common/apis/modules";
 
