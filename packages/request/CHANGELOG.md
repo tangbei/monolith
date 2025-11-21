@@ -1,5 +1,11 @@
 # @tanggoat/request
 
+## 2.1.7
+
+### Patch Changes
+
+- 新增 await-to-js 方法
+
 ## 2.1.6
 
 ### Patch Changes

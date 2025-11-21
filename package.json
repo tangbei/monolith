@@ -4,9 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "next:dev": "pnpm --filter next-template dev",
-    "next:build": "pnpm --filter next-template build",
-    "next:start": "pnpm --filter next-template start",
+    "next:dev": "pnpm --filter monolith-nextjs dev",
+    "next:build": "pnpm --filter monolith-nextjs build",
+    "next:start": "pnpm --filter monolith-nextjs start",
     "published": "node scripts/publish.mjs"
   },
   "keywords": [],

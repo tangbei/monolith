@@ -1,5 +1,5 @@
+import Request, { to } from '@tanggoat/request';
 import type { InternalAxiosRequestConfig, RequestConfig } from '@tanggoat/request';
-import Request from '@tanggoat/request';
 import type { TBResponse } from '../types';
 
 // 重写返回类型
@@ -32,10 +32,10 @@ const TBRequest = <D, T>(config: TBRequestConfig<D, T>) => {
   if (method === 'get' && config.data) {
     config.params = config.data;
   }
-  return request.request<TBResponse<T>>({
+  return to<TBResponse<T>, Error>(request.request<TBResponse<T>>({
     ...config,
     headers: config?.headers || {} as InternalAxiosRequestConfig['headers']
-  });
+  }));
 };
  
 export default TBRequest;

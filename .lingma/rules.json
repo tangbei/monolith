@@ -1,0 +1,83 @@
+{
+  "projectType": "monorepo",
+  "frameworks": [
+    {
+      "name": "react",
+      "version": "19.x"
+    },
+    {
+      "name": "nextjs",
+      "path": "apps/monolith-nextjs"
+    },
+    {
+      "name": "vite",
+      "path": "apps/demo"
+    }
+  ],
+  "languages": [
+    {
+      "name": "typescript",
+      "extensions": [".ts", ".tsx"]
+    },
+    {
+      "name": "javascript",
+      "extensions": [".js", ".jsx", ".mjs"]
+    },
+    {
+      "name": "markdown",
+      "extensions": [".md"]
+    }
+  ],
+  "packageManager": {
+    "name": "pnpm",
+    "workspaces": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
+  "buildTools": [
+    {
+      "name": "tsup",
+      "usedBy": "packages/request"
+    },
+    {
+      "name": "vite",
+      "usedBy": "apps/demo"
+    },
+    {
+      "name": "nextjs-build",
+      "usedBy": "apps/monolith-nextjs"
+    }
+  ],
+  "components": [
+    {
+      "name": "@tanggoat/request",
+      "type": "library",
+      "path": "packages/request",
+      "language": "typescript"
+    },
+    {
+      "name": "demo-app",
+      "type": "application",
+      "path": "apps/demo",
+      "framework": "vite"
+    },
+    {
+      "name": "monolith-nextjs",
+      "type": "application",
+      "path": "apps/monolith-nextjs",
+      "framework": "nextjs"
+    }
+  ],
+  "publishing": {
+    "tool": "changesets",
+    "script": "scripts/publish.mjs"
+  },
+  "codeStyles": {
+    "indentation": 2,
+    "quotes": "double"
+  },
+  "testing": {
+    "unitTest": false
+  }
+}

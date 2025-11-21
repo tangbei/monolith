@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import Link from "next/link";
 // import { useRouter } from "next/navigation";
@@ -24,7 +24,7 @@ import { request1 } from "@/common/apis/modules";
 const Home = (props?: any) => {
 
   const onHandleClick = async () => {
-    const res = await request1({});
+    const [error, res] = await request1({});
     console.log('test - onHandleClickH', res);
   };
 
@@ -40,7 +40,7 @@ const Home = (props?: any) => {
         <Link href="/person">Link跳转 - 路由组跳转</Link>
 
         <div>
-          <Button>请求测试</Button>
+          <Button onClick={onHandleClick}>请求测试</Button>
         </div>
       </div>
     </div>
